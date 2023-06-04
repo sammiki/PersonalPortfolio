@@ -32,9 +32,7 @@
         <div class="pill navbar-pill" id="navbarToggler">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#home"
-                >Home <span class="sr-only">(current)</span></a
-              >
+              <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
@@ -57,8 +55,7 @@
       <section class="home bd-grid" id="home">
         <div class="home-container">
           <h1 class="home-title">
-            Hi,<br />I am <span class="home-title-color">Samantha King</span
-            ><br />Future Computer Scientist
+            Hi,<br />I am <span class="home-title-color">Samantha King</span><br />Future Computer Scientist
           </h1>
         </div>
         <div class="home-img">
@@ -78,24 +75,24 @@
               My name is Samantha King, and I am a student of Computer Science
               at Portland State University. I am captivated by the boundless
               possibilities of the computing universe and the power to shape the
-              intangible into functional and innovative solutions.<br /> 
-              Throughout my journey, I have honed my expertise in several programming
-              languages, including Python, C#, and C++. Continually expanding my
-              skill set, I consistently demonstrate an agile capacity to adapt
-              to unfamiliar programming languages.<br /> 
-              My passion for art and design has been instrumental in my pursuit of 
-              game development. By combining my programming skills with a keen eye for 
-              aesthetics, I am able to craft immersive and visually stunning gaming
-              experiences. In addition to my programming abilities, I have a
-              strong grasp of linear algebra, a field that plays a vital role in
-              computer graphics and simulation.<br /> 
-              As a lifelong learner, I am constantly exploring new technologies and 
-              programming paradigms to push the boundaries of what is possible. My approach to
-              problem-solving is rooted in analytical thinking and attention to
-              detail. With an unwavering passion for the intersection of
-              computing and design, I am continuously inspired to explore new
-              frontiers and harness the limitless potential that lies within
-              this ever-evolving realm.
+              intangible into functional and innovative solutions.<br />
+              Throughout my journey, I have honed my expertise in several
+              programming languages, including Python, C#, and C++. Continually
+              expanding my skill set, I consistently demonstrate an agile
+              capacity to adapt to unfamiliar programming languages.<br />
+              My passion for art and design has been instrumental in my pursuit
+              of game development. By combining my programming skills with a
+              keen eye for aesthetics, I am able to craft immersive and visually
+              stunning gaming experiences. In addition to my programming
+              abilities, I have a strong grasp of linear algebra, a field that
+              plays a vital role in computer graphics and simulation.<br />
+              As a lifelong learner, I am constantly exploring new technologies
+              and programming paradigms to push the boundaries of what is
+              possible. My approach to problem-solving is rooted in analytical
+              thinking and attention to detail. With an unwavering passion for
+              the intersection of computing and design, I am continuously
+              inspired to explore new frontiers and harness the limitless
+              potential that lies within this ever-evolving realm.
             </p>
           </div>
           <div class="about-img">
@@ -133,9 +130,84 @@
             </ul>
           </div>
           <div class="skills-img">
-            <img class="skills-img-size" src="images/me_recroom.jpg" alt="Samantha's avatar in the game RecRoom">
+            <img
+              class="skills-img-size"
+              src="images/me_recroom.jpg"
+              alt="Samantha's avatar in the game RecRoom"
+            />
           </div>
         </div>
+      </section>
+      <!--===== PROJECTS =====-->
+      <section class="projects bd-grid" id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-container">
+          <a
+            class="project-link"
+            href="https://github.com/CodyGreen1904/villagers-handbook"
+            >Villager's Handbook</a
+          >
+          <a
+            class="project-link"
+            href="https://github.com/PSU-Trash-Pandas/test-results-database"
+            >PacStar Test Results Database Interface</a
+          >
+        </div>
+      </section>
+      <!--===== CONTACT =====-->
+      <section class="contact bd-grid" id="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="form-container">
+          <form class="form">
+            <div class="form-element">
+              <label class="input-label" for="name">Name:</label>
+              <input class="input-element" type="text" id="name" name="name" />
+            </div>
+            <br />
+            <div class="form-element">
+              <label class="input-label" for="email">Email:</label>
+              <input
+                class="input-element"
+                type="email"
+                id="email"
+                name="email"
+              />
+            </div>
+            <br />
+            <div class="form-element">
+              <label class="input-label" for="message">Message:</label>
+              <textarea class="message-box" rows="4" cols="50" name="message">Enter comment here...</textarea>
+            </div>
+            <br />
+            <fieldset class="form-element radios">
+              <legend>Preferred Pronouns</legend>
+              <input
+                type="radio"
+                id="option1"
+                name="pronouns"
+                value="she/her"
+              />
+              <label for="option1">She/her</label><br />
+              <input type="radio" id="option2" name="pronouns" value="he/him" />
+              <label for="option2">He/him</label><br />
+              <input
+                type="radio"
+                id="option3"
+                name="pronouns"
+                value="they/them"
+              />
+              <label for="option3">They/them</label><br />
+              <input type="radio" id="option4" name="pronouns" value="other" />
+              <label for="option4">I prefer not to say</label><br />
+            </fieldset>
+            <br />
+            <div class="form-element">
+              <input type="submit" value="Submit" class="btns btn-primary" />
+              <input type="reset" value="Reset" class="btns btn-secondary" />
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
   </body>
 </html>
