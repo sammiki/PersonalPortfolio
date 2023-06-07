@@ -1,5 +1,5 @@
 /*===== GOOGLE FONTS =====*/
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /*===== VARIABLES CSS =====*/
 :root {
@@ -10,16 +10,16 @@
   --smaller-font-size: 0.75rem;
   --h2-font-size: 1.25rem;
 
-  --light-tan: #FFE9B5;
-  --dark-purple: #73324A;
-  --yellow-orange: #F2AF5C;
-  --orange: #F2884B;
-  --red-orange: #F27457;
+  --light-tan: #ffe9b5;
+  --dark-purple: #73324a;
+  --yellow-orange: #f2af5c;
+  --orange: #f2884b;
+  --red-orange: #f27457;
   --light-red-orange: #faa177;
-  --light-blue: #4BD2F2;
-  --blue: #30A1BA;
-  --blue2: #1BA6B0;
-  --dark-blue: #1D5F6E;
+  --light-blue: #4bd2f2;
+  --blue: #30a1ba;
+  --blue2: #1ba6b0;
+  --dark-blue: #1d5f6e;
 }
 
 /*===== BASE =====*/
@@ -48,22 +48,11 @@ body {
 
 .section-title {
   position: relative;
-  font-size: var(--bigger-font-size);
+  font-size: 60px;
   font-weight: 900;
   color: var(--dark-purple);
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 0.5rem;
   text-align: center;
-}
-
-.section-title::after {
-  position: absolute;
-  width: 64px;
-  height: 0.18rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 2rem;
 }
 
 a:link {
@@ -72,7 +61,7 @@ a:link {
 
 /*===== LAYOUT =====*/
 .bd-grid {
-  max-width: 1224px;
+  max-width: 1024px;
   margin: 3rem 1rem;
   border-radius: 50px;
   background-color: var(--light-tan);
@@ -90,7 +79,6 @@ a:link {
 .row {
   align-items: center;
 }
-
 
 /*===== NAV =====*/
 .navbar {
@@ -122,7 +110,6 @@ a:link {
   justify-content: center;
 }
 
-
 .home-img-size {
   width: 350px;
   height: 350px;
@@ -132,7 +119,7 @@ a:link {
 /* ===== ABOUT =====*/
 .about {
   position: relative;
-  padding: 2rem 4rem 4rem;
+  padding: 2rem 4rem;
 }
 
 .about-container {
@@ -140,56 +127,124 @@ a:link {
   align-items: center;
 }
 
+#about-title {
+  margin-bottom: 1rem;
+}
+
 .about-text-container {
-  padding-left: 2rem;
+  padding-left: 0.5rem;
   text-align: justify;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
 }
 
-.about-img {
+#about-img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .about-img-size {
-  border-radius: 50%;
-  width: 350px;
-  height: 350px;
+  border-radius: 50px;
 }
 
-/* ===== SKILLS =====*/
+/* ===== Experience =====*/
 .skills {
   position: relative;
   padding: 2rem 4rem 3rem;
 }
 
-.skills-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+#exp-title {
+  margin-bottom: 2rem;
 }
 
-.skills-content {
-  padding-right: 10rem;
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  margin-bottom: 30px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 500px;
+	height: 500px;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: transparent;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: var(--dark-blue);
+  color: var(--light-tan);
+  transform: rotateY(-180deg);
+}
+
+.skills-img-size {
+  width: 500px;
+  height: 500px;
+  border-radius: 50px;
+}
+
+.skills-title {
+  margin-top: 2.5rem;
+  color: var(--light-red-orange);
+  font-weight: 700;
+}
+
+.pl-title, .courses-title {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--light-red-orange);
+  font-weight: 700;
 }
 
 .skills-text-container {
   padding-left: 5rem;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 500;
-  margin-bottom: 2.5rem;
-}
-
-.pl-list {
-  columns: 2;
+  margin-top: 2.5rem;
+  text-align: left;
 }
 
 .pl-text-container {
-  padding-left: 3rem;
-  font-size: 20px;
+  padding-left: 9rem;
+  font-size: 24px;
   font-weight: 500;
+  text-align: left;
+}
+
+.courses-text-container {
+  padding-left: 0.5rem;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
 }
 
 li::marker {
@@ -197,7 +252,7 @@ li::marker {
 }
 
 .skills-list-item {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .list-text {
@@ -205,30 +260,27 @@ li::marker {
   left: 14px;
 }
 
-#skills-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 4rem;
-}
-
-.skills-img-size {
-  border-radius: 10rem;
-}
-
 /* ===== PROJECTS =====*/
 .projects {
   position: relative;
   padding: 2rem 4rem 3rem;
+  height: 575px;
+}
+
+.projects-parent-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .projects-container {
   position: relative;
-  width: 1096px;
+  width: 1024px;
+  height: 500px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
   padding: 30px;
 }
 
@@ -242,8 +294,8 @@ li::marker {
 
   display: flex;
   flex-direction: column;
-  transition : 0.3s ease-in-out;
-  border-radius : 15px;
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
 }
 
 .projects-container .card:hover {
@@ -251,24 +303,23 @@ li::marker {
 }
 
 .projects-container .card .card-title-container {
-  position : relative;
-  width : 267px;
-  height : 260px;
+  position: relative;
+  width: 267px;
+  height: 260px;
   border-radius: 15px;
   text-align: center;
   padding: 25px 15px;
   background-color: var(--yellow-orange);
-  
-  top : -40%;
-  box-shadow : 0 5px 20px rgba(0,0,0,0.2);
-  z-index : 1;
+
+  top: -40%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .card-title {
   font-size: 40px;
   font-weight: 700;
   color: var(--dark-blue);
-
 }
 
 .card-title:hover {
@@ -286,7 +337,6 @@ li::marker {
   visibility: hidden;
   opacity: 0;
   transition: 0.3s ease-in-out;
-
 }
 
 .projects-container .card:hover .card-text-container {
@@ -303,6 +353,10 @@ li::marker {
   padding: 2rem 4rem 3rem;
 }
 
+#contact-title {
+  margin-bottom: 2rem;
+}
+
 .contact-container {
   display: flex;
   align-items: center;
@@ -316,7 +370,8 @@ li::marker {
   background-color: var(--light-red-orange);
 }
 
-input, .message-box {
+input,
+.message-box {
   background-color: var(--light-tan);
   border: 1px solid var(--blue);
   border-radius: 0.5rem;
