@@ -31,7 +31,12 @@ tracks = [
 thumbnail_img =
   "https://res.cloudinary.com/dapv0bmzq/image/upload/v1686122562/cover_fst8zq.jpg";
 music_artist = "Tipper";
-music_titles = ["Big Question Small Head", "Cuckoo", "Class 5 Roaming Vapour", "Brocken Spectre", "Dead Soon",
+music_titles = [
+  "Big Question Small Head",
+  "Cuckoo",
+  "Class 5 Roaming Vapour",
+  "Brocken Spectre",
+  "Dead Soon",
   "Cinder Cone",
   "Herriot Method",
   "Neuron Huskie",
@@ -52,7 +57,6 @@ function pausePlay() {
     title.textContent = music_titles[trackIndex];
     track.play();
     playing = false;
-    console.log(music_titles[trackIndex]);
   } else {
     pause.style.display = "none";
     play.style.display = "block";
@@ -117,5 +121,3 @@ function changeProgressBar() {
   track.currentTime = progressBar.value;
 }
 progressBar.addEventListener("click", changeProgressBar);
-
-

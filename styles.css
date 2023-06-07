@@ -6,9 +6,6 @@
   --header-height: 3rem;
   --body-font: "Quicksand", sans-serif;
   --normal-font-size: 1rem;
-  --bigger-font-size: 2rem;
-  --smaller-font-size: 0.75rem;
-  --h2-font-size: 1.25rem;
 
   --white: #ffffff;
   --light-tan: #ffe9b5;
@@ -111,7 +108,7 @@ a:link {
   display: flex;
   align-items: center;
   font-weight: 600;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar-brand {
@@ -122,7 +119,8 @@ a:link {
   background: rgba(0, 0, 0, 0.1);
 }
 
-.navbar-collapse.collapsing, .navbar-collapse.show {
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
   text-align: right;
   background-color: var(--dark-grey);
 }
@@ -131,13 +129,13 @@ a:link {
   margin-left: 0;
 }
 
-
 @media only screen and (max-width: 600px) {
   .navbar-brand {
     font-size: 14px;
   }
 
-  .navbar-collapse, .navbar-collapse.collapse {
+  .navbar-collapse,
+  .navbar-collapse.collapse {
     margin-left: 19rem;
   }
 }
@@ -147,7 +145,8 @@ a:link {
     font-size: 16px;
   }
 
-  .navbar-collapse, .navbar-collapse.collapse {
+  .navbar-collapse,
+  .navbar-collapse.collapse {
     margin-left: 40rem;
   }
 }
@@ -155,6 +154,10 @@ a:link {
 @media only screen and (min-width: 992px) {
   .navbar-brand {
     font-size: 20px;
+  }
+
+  .navbar-collapse.collapse {
+    margin-left: 0;
   }
 }
 
@@ -217,7 +220,7 @@ a:link {
 
 .about-text-container {
   padding-left: 0.5rem;
-  text-align: justify;
+  text-align: left;
   font-size: 15px;
   font-weight: 500;
 }
@@ -312,7 +315,7 @@ a:link {
 .flip-card-inner {
   position: relative;
   width: 500px;
-	height: 500px;
+  height: 500px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -322,7 +325,8 @@ a:link {
   transform: rotateY(-180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -354,7 +358,8 @@ a:link {
   font-weight: 700;
 }
 
-.pl-title, .courses-title {
+.pl-title,
+.courses-title {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   color: var(--light-red-orange);
@@ -387,7 +392,9 @@ li::marker {
   color: var(--red-orange);
 }
 
-.skills-list-item, .pl-list-item, .c-list-item {
+.skills-list-item,
+.pl-list-item,
+.c-list-item {
   margin-bottom: 15px;
 }
 
@@ -397,12 +404,16 @@ li::marker {
 }
 
 @media only screen and (max-width: 600px) {
-  .flip-card, .flip-card-inner, .skills-img-size {
+  .flip-card,
+  .flip-card-inner,
+  .skills-img-size {
     width: 350px;
     height: 350px;
   }
 
-  .skills-title, .pl-title, .courses-title {
+  .skills-title,
+  .pl-title,
+  .courses-title {
     font-size: 24px;
   }
 
@@ -452,7 +463,7 @@ li::marker {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
+
   padding: 30px;
 }
 
@@ -520,7 +531,8 @@ li::marker {
 }
 
 @media only screen and (max-width: 600px) {
-  .projects, .projects-parent-container {
+  .projects,
+  .projects-parent-container {
     height: 830px;
   }
 
@@ -542,7 +554,8 @@ li::marker {
 }
 
 @media only screen and (min-width: 600px) {
-  .projects, .projects-parent-container {
+  .projects,
+  .projects-parent-container {
     height: 850px;
   }
 
@@ -669,6 +682,12 @@ legend {
   padding: 2rem;
 }
 
+.section-subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
 .music-player-container {
   height: 600px;
   display: flex;
@@ -703,6 +722,7 @@ legend {
   height: 40%;
   width: 100%;
   background-color: var(--dark-grey);
+  z-index: 4;
   bottom: -10%;
   display: grid;
   grid-template-columns: 45px 155px 75px;
@@ -720,6 +740,11 @@ legend {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.play-pause-button {
+  width: 24px;
+  height: 24px;
 }
 
 .fa-pause-circle {
@@ -761,6 +786,7 @@ legend {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .progress-bar {
@@ -794,4 +820,18 @@ legend {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   color: var(--red-orange);
+}
+
+.visually-hidden {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }

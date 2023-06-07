@@ -61,9 +61,9 @@
           <div class="row">
             <div class="col-lg-6 home-title">
               <h1 class="hello-title">Hi, I'm Sammi</h1>
-              <h3 class="hello-subtitle">
+              <h2 class="hello-subtitle">
                 Digital designer & <br />Front-end developer
-              </h3>
+              </h2>
             </div>
             <div class="col-lg-6 home-img">
               <img
@@ -333,6 +333,7 @@
                 class="message-box"
                 rows="4"
                 cols="40"
+                id="message"
                 name="message"
               ></textarea>
             </div>
@@ -369,9 +370,11 @@
       <!--===== MUSIC =====-->
       <section class="music bd-grid" id="music">
         <h2 class="section-title" id="music-title">Music</h2>
+        <h3 class="section-subtitle">Check out my favorite musician!</h3>
         <div class="music-player-container">
           <div class="player-container">
             <audio
+              title="Dave Tipper's Broken Soul Jamboree, electronic music"
               src="https://res.cloudinary.com/dapv0bmzq/video/upload/v1686123867/Tipper_-_Broken_Soul_Jamboree_-_01_Big_Question_Small_Head_gdni78.mp3"
               id="track"
             ></audio>
@@ -386,7 +389,7 @@
                 <i class="far fa-pause-circle fa-3x" id="pause"></i>
               </div>
               <div class="music-info">
-                <div id="m-artist"></div>
+                <div id="m-artist">Tipper</div>
                 <div id="m-title">Big Question Small Head</div>
               </div>
               <div class="next-prev">
@@ -400,7 +403,16 @@
                 ></i>
               </div>
               <div class="progress-bar">
-                <input type="range" id="progressBar" min="0" max="" value="0" />
+                <label for="progressBar"
+                  ><span class="visually-hidden">progressBar</span></label
+                >
+                <input
+                  type="range"
+                  id="progressBar"
+                  min="0"
+                  max="6"
+                  value="0"
+                />
               </div>
               <div class="music-time">
                 <div id="currentTime"></div>
